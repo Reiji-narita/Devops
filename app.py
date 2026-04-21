@@ -46,8 +46,8 @@ if __name__ == "__main__":
     else:
         # Execução automática (evita erro no Docker)
         b = Biblioteca()
-        b.adicionar_livro("Python Básico", "Rodrigo")
-        b.adicionar_livro("DevOps na Prática", "Ribas")
+        b.adicionar_livro("Python Básico", "REJI")
+        b.adicionar_livro("DevOps na Prática", "Narita")
 
         b.emprestar_livro("Python Básico")
 
