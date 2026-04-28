@@ -1,19 +1,22 @@
-name: CI
+name: CI - Testes Biblioteca
 
 on:
-  push:
-    branches: [ main, feature-biblioteca ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - name: Clonar repositório
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - run: python app.py
+    - name: Rodar testes
+      run: |
+        python -m unittest discover
