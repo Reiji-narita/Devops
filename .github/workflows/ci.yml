@@ -3,6 +3,9 @@ name: CI - Testes Unitários
 on:
   push:
     branches: [ "main", "feature-notas", "feature-biblioteca" ]
+name: CI - Testes Biblioteca
+
+on:
   pull_request:
     branches: [ "main" ]
 
